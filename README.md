@@ -11,13 +11,13 @@ This is a academy project! The challenge is:
 * Any framework is allowed.
 * All concepts of POO need to be applied.
 
-## ![alt text](image.png) Project description
+## 📓 Project description
 
 ## 🛠️ Technologys
 
-* Java <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" />   
-* SQLite <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original-wordmark.svg" />
-* Maven <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/maven/maven-original-wordmark.svg" />
+* Java <img align="center" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" />   
+* SQLite <img align="center" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original-wordmark.svg" />
+* Maven <img align="center" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/maven/maven-original-wordmark.svg" />
 
 ## 🚀 Começando
 
@@ -26,10 +26,7 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 ### 📋 Pré-requisitos
 
 De que coisas você precisa para instalar o software?
-- Node
-- MariaDB
 
 ### 🔧 Instalação
-
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=d3d3d3&height=120&section=footer"/>
