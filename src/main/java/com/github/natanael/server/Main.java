@@ -5,12 +5,11 @@ import com.github.natanael.handler.UserHandler;
 import com.sun.net.httpserver.HttpServer;
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.concurrent.Executors;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, SQLException {
 
         DatabaseConnection.createTables();
 

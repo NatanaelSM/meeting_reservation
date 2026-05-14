@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="meeting_reservation" uuid="0e6a0144-25e3-4896-8d4d-5320ba687a1e">
+    <data-source source="LOCAL" name="meeting_reservation.db" uuid="54d9ece9-4350-49a2-beeb-e203364b46b4">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Development\Workspace\Projects\meeting_reservation\meeting_reservation.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/meeting_reservation.db</jdbc-url>
       <jdbc-additional-properties>
         <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />
       </jdbc-additional-properties>
       <working-dir>$ProjectFileDir$</working-dir>
-      <libraries>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.51.1/org/xerial/sqlite-jdbc/3.51.1.0/sqlite-jdbc-3.51.1.0.jar</url>
-        </library>
-      </libraries>
     </data-source>
   </component>
 </project>
