@@ -22,8 +22,18 @@ public class UserHandler implements HttpHandler {
             case "GET":
                 String[] pathSplited = exchange.getRequestURI().toString().split("/");
 
-                if(pathSplited.length > 2){
-
+                if (pathSplited.length > 2) {
+                    String getUser = "SELECT * FROM user WHERE user_id = ?";
+                    try {
+                        assert conn != null;
+                        PreparedStatement pstmt = conn.prepareStatement(getUser);
+                        pstmt.setInt(1, Integer.parseInt(pathSplited[2]));
+                        ResultSet rs = pstmt.executeQuery();
+                        String name = rs.getString("name");
+                        String email = rs.getString("email");
+                    } catch (SQLException e) {
+                        throw new RuntimeException(e);
+                    }
                 }else{
                     String getAllUsers = "SELECT * FROM user";
                     try{
@@ -35,6 +45,7 @@ public class UserHandler implements HttpHandler {
                             int id = rs.getInt("user_id");
                             String name = rs.getString("name");
                             String email = rs.getString("email");
+                            System.out.println(id + " " + name + " " + email + " ");
                         }
 
                         rs.close();
@@ -43,8 +54,6 @@ public class UserHandler implements HttpHandler {
                     }catch (SQLException e){
                         throw new RuntimeException(e);
                     }
-
-
                 }
 
                 break;
@@ -55,7 +64,7 @@ public class UserHandler implements HttpHandler {
                 String name = bodyJson.get("name").getAsString();
                 String email = bodyJson.get("email").getAsString();
 
-                String addUser = "INSERT INTO user VALUES (?, ?, ?)";
+                String addUser = "INSERT INTO user(user_id, name, email) VALUES (?, ?, ?)";
                 try {
                     assert conn != null;
                     PreparedStatement pstmt = conn.prepareStatement(addUser);

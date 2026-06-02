@@ -1,6 +1,7 @@
 package com.github.natanael.server;
 
 import com.github.natanael.database.DatabaseConnection;
+import com.github.natanael.handler.RoomHandler;
 import com.github.natanael.handler.UserHandler;
 import com.sun.net.httpserver.HttpServer;
 import java.io.IOException;
@@ -16,6 +17,7 @@ public class Main {
         //Server initialization
         HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
         server.createContext("/user", new UserHandler());
+        server.createContext("/room", new RoomHandler());
         server.setExecutor(Executors.newFixedThreadPool(10));
         server.start();
     }
